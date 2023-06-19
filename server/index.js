@@ -10,7 +10,7 @@ const server = http.createServer(app)
 const io = new SocketServer(server)
 
 app.use(morgan("dev"))
-app.use(express.static(resolve(__dirname, "../frontend/dist")))
+app.use(express.static(resolve("frontend/dist")))
 
 io.on("connection", socket => {
     console.log("Client:", socket.id, "connected")
