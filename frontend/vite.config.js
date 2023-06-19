@@ -7,7 +7,7 @@ export default defineConfig({
   server: {
     proxy: {
       "/socket.io": {
-        target: "http://localhost:3000",
+        target: "https://chat-app-u2qv.vercel.app/",
         ws: true
       }
     }
