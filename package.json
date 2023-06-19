@@ -7,6 +7,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon server/index.js --ignore frontend/",
+    "build": "npm run build --prefix frontend",
     "start": "node server/index.js"
   },
   "author": "",
