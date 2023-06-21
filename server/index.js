@@ -14,8 +14,7 @@ app.use(express.static(resolve("frontend/dist")))
 
 io.on("connection", socket => {
     console.log("Client:", socket.id, "connected")
-    socket.on("message", (body) => {
-        console.log(body)   
+    socket.on("message", (body) => {   
         socket.broadcast.emit("message", {
             body,
             from: socket.id.slice(8)
